@@ -1,5 +1,5 @@
 
-INTEGRANTES DEL EQUIPO:
+INTEGRANTES:
 
 Yeiner Alexander Martinez Barrera
 
