@@ -1,0 +1,73 @@
+INSTRUCCIONES DEL JUEGO – Come HAMBURGUESAS
+
+Objetivo del juego
+Atrapar las hamburguesas buenas con la boca del personaje para sumar puntos
+y evitar las hamburguesas rancias, que te restan puntos.
+Ganas si logras 25 puntos antes de que se acabe el tiempo (5 minutos).
+
+Control del juego con la cámara
+
+Este juego no se maneja con teclado ni ratón,
+sino con tu mano y un guante amarillo, usando visión artificial.
+
+El sistema de detección usa la cámara para reconocer el color amarillo del guante y analizar su área, aplicando umbralización, operaciones morfológicas y detección de contornos.
+
+Cómo jugar
+
+Coloca el guante amarillo y asegúrate de que se vea bien con buena iluminación.
+
+Abre la mano → “boca abierta”:
+el personaje puede comer las hamburguesas buenas y sumar puntos.
+
+Cierra la mano → “boca cerrada”:
+el personaje no come nada.
+
+Mueve la mano hacia la izquierda o derecha para mover al personaje en esa dirección.
+(El movimiento sigue la posición del centroide del guante en la cámara).
+
+Condiciones del juego
+
+Tienes 5 minutos para jugar.
+
+Cada hamburguesa buena suma +1 punto.
+
+Cada hamburguesa mala resta –1 punto.
+
+Si llegas a 25 puntos antes del tiempo límite, ¡ganas! 
+
+Si el tiempo termina antes de alcanzar 25 puntos, pierdes.
+
+ Recomendaciones
+
+Juega en un lugar bien iluminado (la cámara necesita buena luz).
+
+Mantén el guante amarillo visible en todo momento.
+
+No uses ropa del mismo color que el guante para evitar interferencias.
+
+Si el movimiento no responde, ajusta tu distancia a la cámara.
+
+ Fin del juego
+
+Al terminar, aparecerá una pantalla con el mensaje:
+
+“¡Ganaste!” si lograste 25 puntos.
+
+“Se acabó el tiempo” si no alcanzaste la meta.
+
+Después de unos segundos, el juego se cierra automáticamente
+
+Requisitos del sistema
+
+Para ejecutar el juego correctamente, necesitas tener Python 3.10 o superior
+(instalado y configurado en tu sistema).
+
+También debes instalar las siguientes librerías:
+
+Librerías necesarias
+
+Ejecuta estos comandos en la terminal de Visual Studio Code o CMD:
+
+pip install pygame
+pip install opencv-python
+pip install numpy
