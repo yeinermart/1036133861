@@ -1,0 +1,105 @@
+INSTRUCCIONES DE USO — Sistema de Detección y Conteo de Hortensias
+
+ 1. Requisitos para usar el programa
+
+Antes de ejecutar el archivo detect.py, la persona debe tener instalado:
+
+ *Python 3.12.6
+
+ *(Opcional según Windows) Herramientas de compilación
+
+      Solo son necesarias porque algunas librerías usan componentes en C/C++.
+
+      *Herramientas de compilación MSVC para C++
+
+      *Windows 11 SDK (10.0.23100.6901)
+
+      *CMake para C++
+
+ *Las siguientes librerías:
+
+Abrir una terminal (PowerShell o CMD) y ejecutar:
+
+pip install ultralytics opencv-python norfair numpy tkinter
+
+Archivo del modelo entrenado
+
+Debe estar en la misma carpeta que detect.py y llamarse:
+
+best.pt
+
+2. Ubicación de los archivos
+
+La carpeta del proyecto debe contener mínimo:
+
+proyecto_Hortensias/
+    detect.py
+    best.pt
+
+3. Cómo ejecutar el programa
+
+Abrir la carpeta proyecto_Hortensias en Visual Studio Code.
+
+Abrir una terminal en la parte inferior de VS Code o abrir un cmd.
+
+Activar el entorno virtual (si aplica):
+
+venv\Scripts\activate.bat
+
+Ejecutar el programa:
+
+python detect.py
+
+
+4. Seleccióne el video
+
+Cuando ejecutes el programa:
+
+Se abrirá automáticamente una ventana para seleccionar el video.
+
+Puedes cargar archivos .mp4, .avi, .mov, .mkv.
+
+Si no seleccionas nada, el programa se cierra.
+
+5. Procesamiento del video
+
+El programa:
+
+Analiza el video frame por frame.
+
+Detecta hortensias blancas y cremosas usando YOLO.
+
+Usa tracking (Norfair) para evitar contar la misma flor varias veces.
+
+Muestra en la pantalla:
+
+Cada hortensia con su ID único
+
+El tipo de flor
+
+Contadores en tiempo real
+
+6. Cómo detener el programa
+
+Mientras el video se está mostrando en una ventana:
+
+Presiona Q en el teclado para terminar manualmente.
+
+7. Resultado final
+
+Cuando termine:
+
+Se imprime en consola:
+
+===========================================
+RESULTADO FINAL (OBJETOS ÚNICOS DETECTADOS)
+Hortensias BLANCAS:  X
+Hortensias CREMOSAS: Y
+===========================================
+Video procesado guardado en:
+(ruta del archivo)
+
+
+El video con las detecciones se guarda en la misma carpeta del video original, con este formato:
+
+NOMBREDELVIDEO_PROCESADO.mp4
